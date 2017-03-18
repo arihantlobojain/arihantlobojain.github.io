@@ -1,0 +1,40 @@
+= form_for @book do |f|
+  - if @book.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@book.errors.count, "error")} prohibited this book from being saved:"
+      %ul
+        - @book.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :title, {:style=>'color:#FFFFFF;font-weight:700; font-size:0.8em;text-align'}
+    = f.text_field :title, {:style=>'color:#FFFFFFfont-size: 0.5em; font-weight: 600; font-weight: 600'}
+  .field
+    = f.label :author, {:style=>'color:#FFFFFF;font-weight:700; font-size:0.8em;'}
+    = f.text_field :author, {:style=>'color:#FFFFFF;font-size: 0.5em; font-weight: 600'}
+  .field
+    = f.label :language, {:style=>'color:#FFFFFF;font-weight:700; font-size:0.8em;'}
+    = f.text_field :language, {:style=>'color:#FFFFFF;font-size: 0.5em; font-weight: 600'}
+  .field
+    = f.label :category, {:style=>'color:#FFFFFF;font-weight:700; font-size:0.8em;'}
+    = f.text_field :category, {:style=>'color:#FFFFFF;font-size: 0.5em; font-weight: 600'}
+  .field
+    = f.label :base_price, {:style=>'color:#FFFFFF;font-weight:700; font-size:0.8em;'}
+    = f.text_field :base_price, {:style=>'color:#FFFFFF;font-size: 0.5em; font-weight: 600'}
+  .field
+    = f.label :rent_price, {:style=>'color:#FFFFFF;font-weight:700; font-size:0.8em;'}
+    = f.text_field :rent_price, {:style=>'color:#FFFFFF;font-size: 0.5em; font-weight: 600'}
+  .field
+    = f.label :desc, {:style=>'color:#FFFFFF;font-weight:700; font-size:0.8em;'}
+    = f.text_area :desc, {:style=>'color:#FFFFFF;font-size: 0.5em; font-weight: 600'}
+  .field
+    = f.label :availability, {:style=>'color:#FFFFFF;font-weight:700; font-size:0.8em;'}
+    = f.check_box :availability, {:style=>'color:#FFFFFF;font-size: 0.5em; font-weight: 600'}
+  .field
+    = f.label :issueable, {:style=>'color:#FFFFFF;font-weight:700; font-size:0.8em;'}
+    = f.check_box :issueable, {:style=>'color:#FFFFFF;font-size: 0.5em; font-weight: 600'}
+  .field
+    = f.label :buyable, {:style=>'color:#FFFFFF;font-weight:700; font-size:0.8em;'}
+    = f.check_box :buyable, {:style=>'color:#FFFFFF;font-size: 0.5em; font-weight: 600'}
+  .actions
+    = f.submit 'Save', {:style=>'color:#34495e;font-weight:700; font-size:0.8em;border:2px solid white;'}

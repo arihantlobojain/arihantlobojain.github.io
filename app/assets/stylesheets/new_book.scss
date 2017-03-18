@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,700i');
+html,body{
+	font-family: 'Open Sans', sans-serif;
+	background-color: #16a085;
+	color: #fff;
+	padding: 0;
+	margin: 0;
+}
+.new_book{
+	color: #fff;
+	padding-left: 20%;
+	position: relative;
+}
+.field{
+	color: #fff;
+	font-size: 2em;
+	padding-right: 20%;
+	position: relative;
+}
+.actions{
+	color: #fff;
+	font-size: 1.5em;
+}
+.nav-wrapper{
+	li a{
+		color: #34495e;
+		font-weight: 700;
+	}
+}

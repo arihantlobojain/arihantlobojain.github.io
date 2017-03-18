@@ -1,0 +1,6 @@
+= stylesheet_link_tag 'main_menu.scss', media: 'all'
+
+.lists
+	=link_to "Buy/Borrow",books_path, :class => "options"
+	=link_to "Sell/Lend", new_book_path, :class => "options"
+	=link_to "Decide Later", books_path, :class => "options"

@@ -1,0 +1,15 @@
+%nav
+  .nav-wrapper.white
+    %a.brand-logo{:href => "#"} Logo
+    %ul#nav-mobile.right.hide-on-med-and-down
+      %li
+        %a{:href => books_path} Buy/Borrow
+      %li
+        %a{:href => new_book_path} Sell/Lend
+	  
+
+%h1.new_book New Book
+
+= render 'form'
+
+= link_to 'Back', books_path

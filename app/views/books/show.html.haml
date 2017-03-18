@@ -1,0 +1,46 @@
+%nav
+  .nav-wrapper.white
+    %a.brand-logo{:href => "#"} Logo
+    %ul#nav-mobile.right.hide-on-med-and-down
+      %li
+        %a{:href => books_path} Buy/Borrow
+      %li
+        %a{:href => new_book_path} Sell/Lend
+    
+%p#notice= notice
+
+.list_show
+  %p
+    %b Title:
+    = @book.title
+  %p
+    %b Author:
+    = @book.author
+  %p
+    %b Language:
+    = @book.language
+  %p
+    %b Category:
+    = @book.category
+  %p
+    %b Base price:
+    = @book.base_price
+  %p
+    %b Rent price:
+    = @book.rent_price
+  %p
+    %b Desc:
+    = @book.desc
+  %p
+    %b Availability:
+    = @book.availability
+  %p
+    %b Issueable:
+    = @book.issueable
+  %p
+    %b Buyable:
+    = @book.buyable
+  = link_to 'Edit', edit_book_path(@book), {:style=>'color:#FFFFFF;'}
+  \|
+  = link_to 'Back', books_path, {:style=>'color:#FFFFFF;'}
+

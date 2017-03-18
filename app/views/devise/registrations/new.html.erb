@@ -4,17 +4,17 @@
   <%= devise_error_messages! %>
 
   <div class="field">
-    <%= f.label :name %><br/>
+    <%= f.label :name, {:style => 'color:#fff;font-weight: 600; font-size:0.8em;'} %><br/>
     <%= f.text_field :name, autofocus: true %>
 
   </div>
   <div class="field">
-    <%= f.label :email %><br />
+    <%= f.label :email, {:style => 'color:#fff;font-weight: 600; font-size:0.8em;font-weight: 600; font-size:0.8em;'} %><br />
     <%= f.email_field :email, autofocus: true %>
   </div>
 
   <div class="field">
-    <%= f.label :password %>
+    <%= f.label :password, {:style => 'color:#fff;font-weight: 600; font-size:0.8em;'} %>
     <% if @minimum_password_length %>
     <em>(<%= @minimum_password_length %> characters minimum)</em>
     <% end %><br />
@@ -22,12 +22,12 @@
   </div>
 
   <div class="field">
-    <%= f.label :password_confirmation %><br />
+    <%= f.label :password_confirmation, {:style => 'color:#fff;font-weight: 600; font-size:0.8em;'} %><br />
     <%= f.password_field :password_confirmation, autocomplete: "off" %>
   </div>
 
   <div class="actions">
-    <%= f.submit "Sign up" %>
+    <%= f.submit "Sign up", {:style => 'color:#000;font-weight: 600; font-size:0.8em;'} %>
   </div>
 <% end %>
 
